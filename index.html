@@ -403,7 +403,7 @@ var SND=(function(){
 // Scenes
 var sc=document.querySelectorAll('.scene'),cur=0,dots=document.getElementById('dots'),tm;
 sc.forEach(function(_,i){dots.innerHTML+='<b'+(i?'':' class="a"')+'></b>'});
-var txt='Gửi hai người phụ nữ tuyệt vời nhất trong nhà';
+var txt='Gửi hai người phụ nữ tuyệt vời nhất nhà';
 function typeIt(){var el=document.getElementById('type'),i=0;el.textContent='';clearInterval(tm);setTimeout(function(){tm=setInterval(function(){el.textContent=txt.slice(0,++i);if(i%2==0)SND.type();if(i>=txt.length){clearInterval(tm);SND.done()}},70)},1800)}
 function go(n){
   sc[cur].classList.remove('on');cur=(n+sc.length)%sc.length;
